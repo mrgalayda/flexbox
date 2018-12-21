@@ -1,0 +1,259 @@
+* {
+	outline: none;
+	transition: all .3s ease;
+}
+
+html{
+	padding: 0;
+	margin: 0;
+}
+body{
+	padding: 0;
+	margin: 0;
+}
+body.no-flexbox{
+
+}
+nav{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	@media only screen and (min-width: 768px) {
+		width: 420px;	
+	}
+	ul{
+	  display: flex;
+	  align-items: center;
+	  width: 100%;
+	  margin: 0;
+	  padding: 0;
+	  li{
+	  		background-color: $black;
+	  	  	flex: 1;
+	  	  	margin: 0;
+	  	  	padding: 0;
+	  	  	list-style: none;
+	  	  		box-shadow: 0 0 0 rgba(0,0,0,0.3);
+	  	  	&:hover{
+	  	  		box-shadow: 0 0 25px rgba(0,0,0,0.3);
+	  	  	}
+	  	  a{
+	  	  	text-align: center;
+	  	  	width: 100%;
+	  	  	display: flex;
+	  	  	height: 60px;
+	  	  	align-items: center;
+	  	  	justify-content: center;
+	  	  	color: $white;
+	  	  	text-decoration: none;
+	  	  	font-size: 12px;
+	  	  	font-family: $brand-body;
+	  	  	letter-spacing: 3px;
+	  	  	@media only screen and (min-width: 768px) {
+		  	  	height: 90px;
+			}
+	  	  }
+	  	}
+	  	li.active{
+	  		background-color: $grey;
+	  		@media only screen and (min-width: 768px) {
+	  			background-color: $white;
+			}
+	  		a{
+	  			color: $black;
+	  		}
+	  	}
+	}
+}
+main{
+	 display: flex;
+	 flex-direction: column-reverse;
+	 height: 100vh;
+	 background-color: $grey;
+	 @media only screen and (min-width: 768px) {
+		flex-direction: row-reverse;
+		background-color: $white;
+	}
+}
+
+#product-gallery{
+  	flex: 0 0 60vh;
+	display: flex;
+	height: 100vh;
+	align-items: center;
+    justify-content: flex-start;
+   flex-direction: column;
+	background: linear-gradient(270deg, #17d2a1, #4ecdea, #6d4eea);
+	background-size: 600% 600%;
+	-webkit-animation: AnimationName 30s ease infinite;
+	-moz-animation: AnimationName 30s ease infinite;
+	animation: AnimationName 30s ease infinite;
+  	overflow: scroll;
+  	@media only screen and (min-width: 768px) {
+ 		flex: 1 1 auto;
+	}
+	img{
+		border: none;
+		@media only screen and (min-width: 768px) {
+			border-bottom: 10px solid $white;
+		}
+	}
+
+}
+#buy-box{
+	flex: 0 0 230px;
+	height: 100vh;
+	background-color: $white;
+	display: flex;
+	align-items: center;
+  	justify-content: center;
+  	a{
+  		color: $black;
+  	}
+	@media only screen and (min-width: 768px) {
+		flex: 0 0 420px;
+	}
+	a.chart{
+		font-size: 12px;
+		color: $black;
+	}
+}
+#buy-card{
+  flex: 1;
+  text-align: center;
+  padding: 0 30px;
+}
+img.responsive{
+ 	height: 100%;
+  width: 100%;
+  object-fit: contain;
+  	padding: 0;
+	@media only screen and (min-width: 768px) {
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+  		padding: 10vh 0 10vh 0;
+	}
+}
+footer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $black;
+	color: $white;
+	a{
+		color: $white;
+	}
+	@media only screen and (min-width: 768px) {
+		position: absolute;
+		bottom: 20px;
+		right: 0;
+		width: 420px;	
+		background-color: $white;
+		color: $black;
+		a{
+			color: $black;
+		}
+	}
+}
+
+#buy-me{
+	border: 5px solid $black;
+	position: relative;
+	display: flex;
+	width: 260px;
+	margin: 0 auto 10px auto; 
+	font-family: $brand-font;
+	label{
+		position: absolute;
+		background: $white;
+		top: -21px;
+		padding: 10px;
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}
+
+.styled-select {
+   height: 60px;
+   overflow: hidden;
+   display: flex;
+   	align-items: center;
+	justify-content: center;
+	flex: 0 0 100px;
+}
+.styled-select select {
+   background: transparent;
+   display: flex;
+  	flex: 1 1 auto;
+  	font-weight: 700;
+   border: none;
+   font-size: 36px;
+   height: 36px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+}
+button{
+	background-color: $black;
+	color: $white;
+	border: none;
+	flex: 0 0 160px;
+	height: 72px;
+	font-family: $brand-font;
+	span{
+		font-size: 18px;
+		font-weight: 700;
+	}
+}
+
+#description{
+	@media only screen and (max-width: 768px) {
+		display: none;
+	position: absolute;
+	top: 0vh;
+	z-index: 1;
+	left: 0;
+	height: 100vh;
+	background-color: rgba(255,255,255,1);
+	}
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: $brand-font;
+
+}
+p{
+	font-family: $brand-body;
+	font-weight: 300;
+	color: $medium;
+	font-size: 18px;
+	line-height: 24px;	
+	@media only screen and (min-width: 768px) {
+		font-weight: 300;
+		color: $medium;
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
+
+h1{
+
+}
+h2{
+
+}
+h3{
+
+}
+h4{
+
+}
+h5{
+
+}
+h6{
+
+}
+
+
+

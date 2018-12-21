@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'VolteBold';
+  src: url('VolteBold.eot?#iefix') format('embedded-opentype'),  url('VolteBold.otf')  format('opentype'),
+	     url('VolteBold.woff') format('woff'), url('VolteBold.ttf')  format('truetype'), url('VolteBold.svg#VolteBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
